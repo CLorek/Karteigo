@@ -14,7 +14,7 @@ export default function App() {
           name = {"Karteigo"}
           tagline = {"Die coole Lernapp von C und R die kein Menü hat"}
           image = {require("./assets/logo_ersteVersuche.png")}
-          branch = {"Dev"}
+          branch = {"Master"}
         />
 
       </View>
