@@ -1,9 +1,9 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import styles from "../components/MainScreen/styles";
+import {Text, View, Button} from 'react-native';
+import styles from "../styles/main";
 import StyledButton from "../components/StyledButton";
 
-const Home = () => {
+const Home = ({navigation}) => {
     return(
         <View style={styles.mainContainer}>
 
@@ -39,6 +39,8 @@ const Home = () => {
                                 }}
                             />
                         </View>
+                        <Button onPress = {() => navigation.navigate('Details')} title='Next Screen'></Button>
+
                     </View>
 
                     <View style = {styles.titles}>
