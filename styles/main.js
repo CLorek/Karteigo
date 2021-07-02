@@ -1,4 +1,4 @@
-import variables from './../../variables.js'
+import variables from './variables.js'
 import { StyleSheet, YellowBox } from 'react-native';
 
 const styles = StyleSheet.create({
