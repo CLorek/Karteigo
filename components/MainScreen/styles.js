@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
     mainContainer: {
         width: "100%",
         height: "100%",
+        backgroundColor: 'grey',
+        flex: 1
       },
 
       titles: {
