@@ -54,6 +54,11 @@ const styles = StyleSheet.create({
         flexWrap: 'nowrap'
 
 
+      },
+
+      tempButtonContainer:{
+        display: 'flex',
+        flexWrap: 'nowrap',
       }
 
 });

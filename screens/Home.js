@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View, Button, ScrollView} from 'react-native';
 import styles from "../styles/main";
 import StyledButton from "../components/StyledButton";
 
@@ -39,8 +39,13 @@ const Home = ({navigation}) => {
                                 }}
                             />
                         </View>
-                        <Button onPress = {() => navigation.navigate('Details')} title='Next Screen'></Button>
-
+                        <View  style = {styles.tempButtonContainer}>
+                            <Button onPress = {() => navigation.navigate('Settings')} title='Setting Screen'></Button>
+                            <Button onPress = {() => navigation.navigate('Create')} title='Create Screen'></Button>
+                            <Button onPress = {() => navigation.navigate('Query')} title='Query Screen'></Button>
+                            <Button onPress = {() => navigation.navigate('ShowCards')} title='Show Cards'></Button>
+                            <Button onPress = {() => navigation.navigate('ShowCollections')} title='Show Collections'></Button>
+                        </View>
                     </View>
 
                     <View style = {styles.titles}>
