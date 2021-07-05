@@ -25,7 +25,7 @@ const Home = ({navigation}) => {
                 </View>
 
                 <View style = {styles.titles}>
-                      <Text style = {styles.branch}>{"Master"}</Text>
+                      <Text style = {styles.branch}>{"DEV"}</Text>
                 </View>
 
                 <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
