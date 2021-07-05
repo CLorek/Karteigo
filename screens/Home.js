@@ -33,6 +33,7 @@ const Home = ({navigation}) => {
                 </Button>
 
                 <Icon name='bars' size={30} color='#900' />
+                <Icon name='bars' size={30} color='#900' />
 
                 <FAB style={styles.fab} icon='plus' medium/>
 
