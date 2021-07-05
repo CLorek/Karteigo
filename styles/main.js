@@ -9,6 +9,14 @@ const styles = StyleSheet.create({
         flex: 1
       },
 
+      scrollView: {
+        backgroundColor: 'pink'
+      },
+
+      testText:{
+        fontSize: 25,
+      },
+
       titles: {
         width: "100%",
         alignItems: "center"
