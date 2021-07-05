@@ -43,6 +43,7 @@ const Home = ({navigation}) => {
                             <Button onPress = {() => navigation.navigate('Settings')} title='Setting Screen'></Button>
                             <Button onPress = {() => navigation.navigate('Create')} title='Create Screen'></Button>
                             <Button onPress = {() => navigation.navigate('Query')} title='Query Screen'></Button>
+                            <Button onPress = {() => navigation.navigate('Test')} title='DB Test Screen'></Button>
                             <Button onPress = {() => navigation.navigate('ShowCards')} title='Show Cards'></Button>
                             <Button onPress = {() => navigation.navigate('ShowCollections')} title='Show Collections'></Button>
                         </View>

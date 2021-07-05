@@ -25,7 +25,7 @@ const MyStack = () => {
         <Stack.Screen name="Settings" component={ SettingsScreen } />
         <Stack.Screen name="Create" component={ CreateScreen } />
         <Stack.Screen name="Query" component={ QueryScreen} />
-        <Stack.Screen name="Test" component={ TestScreen} />
+        <Stack.Screen name="Test" component={ TestScreen } />
 
         <Stack.Screen name="ShowCards" component={ ShowCardsScreen } />
         <Stack.Screen name="ShowCollections" component={ ShowCollectionsScreen } />
