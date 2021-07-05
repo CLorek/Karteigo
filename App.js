@@ -2,17 +2,17 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from './components/Home';
-import SettingsScreen from './components/Settings';
-import CreateScreen from './components/Create';
-import QueryScreen from './components/Query';
-import TestScreen from './components/Test';
+import HomeScreen from './screens/Home';
+import SettingsScreen from './screens/Settings';
+import CreateScreen from './screens/Create';
+import QueryScreen from './screens/Query';
+import TestScreen from './screens/Test';
 
-import AddCollectionScreen from './components/create/addCollection';
-import AddCardScreen from './components/create/addCard';
+import AddCollectionScreen from './screens/create/addCollection';
+import AddCardScreen from './screens/create/addCard';
 
-import ShowCardsScreen from './components/create/showCards';
-import ShowCollectionsScreen from './components/create/showCollections';
+import ShowCardsScreen from './screens/create/showCards';
+import ShowCollectionsScreen from './screens/create/showCollections';
 
 const Stack = createStackNavigator();
 
