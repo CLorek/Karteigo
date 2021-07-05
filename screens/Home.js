@@ -1,8 +1,9 @@
 import React from 'react';
-import {Text, View, Button, ScrollView} from 'react-native';
+import {Text, View, ScrollView} from 'react-native';
 import styles from "../styles/main";
 import StyledButton from "../components/StyledButton";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {Button, FAB} from 'react-native-paper';
 
 const Home = ({navigation}) => {
     return(
@@ -15,19 +16,25 @@ const Home = ({navigation}) => {
                 </View>
 
                 <View  style = {styles.tempButtonContainer}>
-                                            <Button onPress = {() => navigation.navigate('Settings')} title='Setting Screen'></Button>
-                                            <Button onPress = {() => navigation.navigate('Create')} title='Create Screen'></Button>
-                                            <Button onPress = {() => navigation.navigate('Query')} title='Query Screen'></Button>
-                                            <Button onPress = {() => navigation.navigate('Test')} title='DB Test Screen'></Button>
-                                            <Button onPress = {() => navigation.navigate('ShowCards')} title='Show Cards'></Button>
-                                            <Button onPress = {() => navigation.navigate('ShowCollections')} title='Show Collections'></Button>
+                                            <Button onPress = {() => navigation.navigate('Settings')} mode="contained" icon='cog'>Setting Screen</Button>
+                                            <Button onPress = {() => navigation.navigate('Create')} mode="contained" icon='plus'>Create Screen</Button>
+                                            <Button onPress = {() => navigation.navigate('Query')}  mode="contained" icon='newspaper'>Query Screen</Button>
+                                            <Button onPress = {() => navigation.navigate('Test')}  mode="contained" icon='database'>DB Test Screen</Button>
+                                            <Button onPress = {() => navigation.navigate('ShowCards')} mode="contained" icon='eye'>Show Cards</Button>
+                                            <Button onPress = {() => navigation.navigate('ShowCollections')} mode="contained" icon='newspaper'>Show Collections</Button>
                 </View>
 
                 <View style = {styles.titles}>
                       <Text style = {styles.branch}>{"Master"}</Text>
                 </View>
 
-                <Icon name='rocket' size={30} color='#900' />
+                <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
+                    Press me
+                </Button>
+
+                <Icon name='bars' size={30} color='#900' />
+
+                <FAB style={styles.fab} icon='plus' medium/>
 
                 <Text style={styles.testText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

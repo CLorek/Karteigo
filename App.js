@@ -2,8 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Provider as PaperProvider } from 'react-native-paper';
-
 import HomeScreen from './screens/Home';
 import SettingsScreen from './screens/Settings';
 import CreateScreen from './screens/Create';
@@ -20,10 +18,9 @@ const Stack = createStackNavigator();
 
 const MyStack = () => {
   return (
-      <PaperProvider>
+
         <NavigationContainer>
           <Stack.Navigator>
-
             <Stack.Screen name="Home" component={ HomeScreen } />
             <Stack.Screen name="Settings" component={ SettingsScreen } />
             <Stack.Screen name="Create" component={ CreateScreen } />
@@ -35,10 +32,9 @@ const MyStack = () => {
 
             <Stack.Screen name="AddCard" component={ AddCardScreen } />
             <Stack.Screen name="AddCollection" component={ AddCollectionScreen } />
-
           </Stack.Navigator>
         </NavigationContainer>
-      </PaperProvider>
+
   );
 };
 
