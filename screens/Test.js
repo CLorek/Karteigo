@@ -7,10 +7,12 @@ import {
     TextInput,
     TouchableOpacity
   } from 'react-native'
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { get } from 'react-native/Libraries/Utilities/PixelRatio';
 
 const Test = () => {
+
+    /**
     let key;
     let value;
     // let karte = {  
@@ -37,32 +39,43 @@ const Test = () => {
         }
     }
 
+*/
+
+    const [questionValue, setQuestionValue] = useState('');
+    const [value, setValue] = useState('');
+
+    const saveData = () => {
+        if(questionValue){
+            AsyncStorage.setItem('question_key', questionValue);
+            setQuestionValue('');
+            alert('Question Saved!');
+        }else{
+            alert('Please type in question!');
+        }
+    }
+
+    const callData = () => {
+        AsyncStorage.getItem('question_key')
+        .then((value) => {
+            setValue(value);
+        })
+    }
 
     return(
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <Text>TestScreen</Text>
-            <Text>Hier hier getestet</Text>
+
+            <Text> AsyncStorage Test in React Native </Text>
             <TextInput
-                style={styles.input}
-                value={key}  
-                placeholder="Kartenname"
-            />
-            <TextInput
-                style={styles.input}
-                value={value}
-                placeholder="Karteninhalt"
-                //   onChangeText={onChangeText}
-                //   onSubmitEditing={onSubmitEditing}
-            />
-            <Button
-              onPress={setData()}
-              title="speichern"
-              color="#841584"
-            />
-            
-            
+                placeholder='Bitte Frage eingeben!'
+                value={questionValue}
+                onChangeText={(data) => setQuestionValue(data)}>
+            </TextInput>
+            <Button onPress={saveData} title='Save Question'/>
+            <Button onPress={callData} title='Get Question'/>
+            <Text>{value}</Text>
         </View>
     )
+
 }
 
 
