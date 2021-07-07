@@ -9,6 +9,14 @@ const styles = StyleSheet.create({
         flex: 1
       },
 
+      image:{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
+        background_repeat: "repeat"
+      },
+
       scrollView: {
         backgroundColor: 'pink'
       },
