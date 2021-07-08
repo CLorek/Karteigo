@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {FAB} from 'react-native-paper';
-import styles from '../../styles/main';
+import styles from "../../styles/main";
+import image from '../../assets/paper.png';
 import {
     StyleSheet,
     Button,
@@ -8,7 +9,8 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
-    Alert
+    Alert,
+    ImageBackground
   } from 'react-native'
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -93,48 +95,50 @@ const deleteCard = async() => {
 
 
 return(
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 30, marginBottom: 50}}> Fülle aus: </Text>
-        <SelectDropdown defaultButtonText="Themengebiet" style={{width: 200} }
-            data={topics}
-            onSelect={updateField("stack")}
-            
-            buttonTextAfterSelection={(selectedItem, index) => {
-                return selectedItem
-            }}
-            rowTextForSelection={(item, index) => {
-                return item
-            }}
-        />
-        
-        <TextInput
-            placeholder='Kartentitel eingeben..'
-            name = "title"
-            value={card.title}
-            onChangeText={updateField("title")}>
-        </TextInput>
-        <TextInput
-            placeholder='Fragestellung eingeben..'
-            name = "question"
-            value={card.question}
-            onChangeText={updateField("question")}>
-        </TextInput>
-        <TextInput
-            placeholder='Antwortmöglichkeit eingeben..'
-            name = "answer"
-            value={card.answer}
-            onChangeText={updateField("answer")}>
-        </TextInput>
+    <ImageBackground source={image} style={styles.backgroundContainer}>
+        <View style={styles.headerContainer}></View>
+        <View style={styles.contentContainer}>
+            <Text style={{fontSize: 30, marginBottom: 50}}> Fülle aus: </Text>
+            <SelectDropdown defaultButtonText="Themengebiet" style={{width: 200} }
+                data={topics}
+                onSelect={updateField("stack")}
 
-        <View style={[{ width: "90%", margin: 10 }]}>
-        <Button onPress={saveData} title='Karte abspeichern'/>
-        <Button onPress={callData} title='Karte abrufen'/>
-        <Button onPress={clearAsyncStorage}title='Alle Karten löschen'/>
-        <Button onPress={deleteCard}title='Karte xyz löschen'/>
+                buttonTextAfterSelection={(selectedItem, index) => {
+                    return selectedItem
+                }}
+                rowTextForSelection={(item, index) => {
+                    return item
+                }}
+            />
+
+            <TextInput
+                placeholder='Kartentitel eingeben..'
+                name = "title"
+                value={card.title}
+                onChangeText={updateField("title")}>
+            </TextInput>
+            <TextInput
+                placeholder='Fragestellung eingeben..'
+                name = "question"
+                value={card.question}
+                onChangeText={updateField("question")}>
+            </TextInput>
+            <TextInput
+                placeholder='Antwortmöglichkeit eingeben..'
+                name = "answer"
+                value={card.answer}
+                onChangeText={updateField("answer")}>
+            </TextInput>
+
+            <View style={[{ width: "90%", margin: 10 }]}>
+                <Button onPress={saveData} title='Karte abspeichern'/>
+                <Button onPress={callData} title='Karte abrufen'/>
+                <Button onPress={clearAsyncStorage}title='Alle Karten löschen'/>
+                <Button onPress={deleteCard}title='Karte xyz löschen'/>
+            </View>
         </View>
-
-  
-    </View>
+        <View style={styles.footerContainer}></View>
+    </ImageBackground>
 )
 
 }

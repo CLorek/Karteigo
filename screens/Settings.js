@@ -6,9 +6,11 @@ import styles from "../styles/main";
 const Details = () => {
     return(
         <ImageBackground source={image} style={styles.backgroundContainer}>
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text>Settings Screen</Text>
-            </View>
+            <View style={styles.headerContainer}></View>
+                <View style={styles.contentContainer} style={{justifyContent: 'center', alignItems: 'center'}}>
+                   <Text> Settings </Text>
+                </View>
+            <View style={styles.footerContainer}></View>
         </ImageBackground>
     )
 }

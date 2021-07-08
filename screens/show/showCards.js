@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Button, Text, FlatList, ImageBackground} from 'react-native';
+import {View, Text, FlatList, ImageBackground} from 'react-native';
 import data from '../../mocks/cardData.json';
 import image from '../../assets/paper.png';
 import styles from "../../styles/main";
@@ -15,6 +15,7 @@ const ShowCards = () => {
                     data={data}
                     renderItem={({item}) => (
                     <>
+                        <Text style={{fontWeight: 'bold'}} onPress = {() => navigation.navigate('Create')}> </Text>
                         <Text style={{fontWeight: 'bold', alignSelf: 'center'}}>{item.question}</Text>
                         <Text style={{color: 'green'}}>{item.answer}</Text>
                         <Text style={{color: 'blue', borderBottomStyle: 'solid', borderBottomWidth: 1, borderColor: 'darkGrey'}}>{item.stack}</Text>

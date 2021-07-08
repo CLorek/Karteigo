@@ -40,6 +40,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
       },
 
+      subTitle:{
+        alignSelf: 'center',
+        fontSize: variables.subTitle,
+        paddingTop: 75
+      },
+
       buttonContainer:{
         flexDirection: 'row',
       },
@@ -102,7 +108,23 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 18,
         color: '#444'
-    }
+    },
+    card: {
+        flex: 1,
+        alignItems: 'center',
+    },
+
+    cardContainer: {
+    },
+
+    cardImage: {
+         height: 175,
+         width: 300
+    },
+
+    cardText:{
+        position: 'absolute',
+    },
 
 });
 

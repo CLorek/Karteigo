@@ -1,4 +1,5 @@
 import * as React from 'react';
+import variables from './styles/variables.js';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from  "react-native-splash-screen";
@@ -15,8 +16,9 @@ import QueryScreen from './screens/Query';
 import AddCollectionScreen from './screens/create/addCollection';
 import AddCardScreen from './screens/create/addCard';
 
-import ShowCardsScreen from './screens/create/showCards';
-import ShowCollectionsScreen from './screens/create/showCollections';
+import ShowCardsScreen from './screens/show/showCards';
+import ShowCollectionsScreen from './screens/show/showCollections';
+import ShowSingleCardScreen from './screens/show/showSingleCard';
 
 
 // const Stack = createStackNavigator();
@@ -31,7 +33,7 @@ const App = () => {
           <Drawer.Navigator
             initialRouteName={HomeScreen} 
             drawerType="front"
-            overlayColor='#80ba24'
+            overlayColor={variables.primaryColor}
             drawerStyle={{
               // style
             }}
@@ -41,7 +43,7 @@ const App = () => {
               gestureEnabled: true,
               headerTitleAlign: "center",
               headerStyle: {
-                backgroundColor: '#80ba24'
+                backgroundColor: variables.primaryColor
               },
               headerTintColor: 'white',
               headerTitleStyle:{
@@ -56,7 +58,7 @@ const App = () => {
               name="Home" 
               component={ HomeScreen } 
               options={{
-                title: "DEV_HOME",
+                title: "Home",
                 drawerIcon: ({focused}) => (
                   <Icon
                   name="home"
@@ -65,19 +67,6 @@ const App = () => {
                   />
                 )
               }}    
-            />
-            <Drawer.Screen 
-              name="Settings" 
-              component={ SettingsScreen } 
-              options={{
-                drawerIcon: ({focused}) => (
-                  <Icon
-                  name="cog"
-                  size={focused ? 25 : 20}
-                  color={focused? '#0080ff' : '#4a5c66'}
-                  />
-                )
-              }}
             />
             <Drawer.Screen 
               name="Create" 
@@ -133,7 +122,7 @@ const App = () => {
             />
             <Drawer.Screen 
             name="AddCard" 
-            component={ AddCardScreen } 
+            component={ AddCardScreen }
             options={{
               drawerIcon: ({focused}) => (
                 <Icon
@@ -157,6 +146,32 @@ const App = () => {
               )
             }}
             />
+            <Drawer.Screen
+              name="ShowSingleCard"
+              component={ ShowSingleCardScreen }
+              options={{
+              drawerIcon: ({focused}) => (
+                <Icon
+                name="eye"
+                size={focused ? 25 : 20}
+                color={focused? '#0080ff' : '#4a5c66'}
+                />
+              )
+            }}
+           />
+            <Drawer.Screen
+              name="Settings"
+              component={ SettingsScreen }
+              options={{
+                drawerIcon: ({focused}) => (
+                  <Icon
+                  name="cog"
+                  size={focused ? 25 : 20}
+                  color={focused? '#0080ff' : '#4a5c66'}
+                  />
+                )
+              }}
+           />
           </Drawer.Navigator>
         </NavigationContainer>
 
