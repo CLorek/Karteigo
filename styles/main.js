@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         height: "100%",
-        background_repeat: "repeat"
+        // background_repeat: "repeat"
       },
 
       scrollView: {
@@ -77,12 +77,37 @@ const styles = StyleSheet.create({
         flexWrap: 'nowrap',
       },
 
+      fabcontainer: {
+        position: 'absolute',
+        margin: 16,
+        right: 0,
+        bottom: 0,
+      },
       fab: {
-          position: 'absolute',
-          margin: 16,
-          right: 0,
-          bottom: 0,
-        },
+        backgroundColor: "white",
+        color: "black"
+      },
+      text: {
+        fontSize: 24,
+        padding: 10,
+        backgroundColor: '#dcdcdc'
+    },
+    input: {
+        padding: 15,
+        height: 50,
+        borderBottomWidth: 1,
+        borderBottomColor: '#333',
+        margin: 10
+    },
+    button: {
+        margin: 15,
+        padding: 10,
+        backgroundColor: 'yellow',
+    },
+    buttonText: {
+        fontSize: 18,
+        color: '#444'
+    }
 
 });
 
