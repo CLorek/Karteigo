@@ -9,47 +9,25 @@ import KarteigoFAB from '../components/FAB';
 const Home = ({navigation}) => {
     return(
         <View style={styles.mainContainer}>
+                <ImageBackground source={image} style={styles.backgroundContainer}>
 
-            <ScrollView style={styles.scrollView}>
-                <ImageBackground source={image} style={styles.image}>
-                    <View style = {styles.titles}>
-                          <Text style = {styles.title}>{"Karteigo"}</Text>
+                    <View style={styles.headerContainer}>
+                        <Text style = {styles.title}>{"Karteigo"}</Text>
                     </View>
-                    
-                    <View style = {styles.homeScreenButtonContainer}>
-                    <View style = {{flexDirection: "row", marginBottom: 20}}>
-                        <TouchableOpacity style={styles.homeScreenButton} onPress = {() => navigation.navigate('Create')}><Text style={styles.homeScreenButtonText}>Karte erstellen</Text></TouchableOpacity>
-                        <TouchableOpacity style={styles.homeScreenButton} onPress = {() => navigation.navigate('Query')}><Text style={styles.homeScreenButtonText}>Abfrage-Modus</Text></TouchableOpacity>
+                    <View style={styles.contentContainer}>
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity style={styles.homeScreenButton} onPress = {() => navigation.navigate('Create')}><Text style={styles.homeScreenButtonText}>Karte erstellen</Text></TouchableOpacity>
+                            <TouchableOpacity style={styles.homeScreenButton} onPress = {() => navigation.navigate('Query')}><Text style={styles.homeScreenButtonText}>Abfrage-Modus</Text></TouchableOpacity>
+                        </View>
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity  style={styles.homeScreenButton} onPress={() => navigation.navigate('ShowCards')} icon='eye'><Text style={styles.homeScreenButtonText}>Alle Karten</Text></TouchableOpacity>
+                        </View>
                     </View>
-                    <View >
-                        <TouchableOpacity  style={styles.homeScreenButton} onPress={() => navigation.navigate('ShowCards')} icon='eye'><Text style={styles.homeScreenButtonText}>Alle Karten</Text></TouchableOpacity>
-                    </View>
-                        
-                    </View>
-
-                    <View style = {styles.titles}>
-                          <Text style = {styles.branch}>{"DEV"}</Text>
+                    <View style={styles.footerContainer}>
                     </View>
 
-                    <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
-                        Press me
-                    </Button>
-
-
-                   
-
-                    <Text style={styles.testText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum.</Text>
                 </ImageBackground>
-            </ScrollView>
-            
-        <KarteigoFAB/>
-
+            <KarteigoFAB/>
         </View>
     )
 }
