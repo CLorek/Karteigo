@@ -20,7 +20,6 @@ const Home = ({navigation}) => {
                         <Button onPress = {() => navigation.navigate('Settings')} mode="contained" icon='cog'>Setting Screen</Button>
                         <Button onPress = {() => navigation.navigate('Create')} mode="contained" icon='plus'>Create Screen</Button>
                         <Button onPress = {() => navigation.navigate('Query')}  mode="contained" icon='newspaper'>Query Screen</Button>
-                        <Button onPress = {() => navigation.navigate('Test')}  mode="contained" icon='database'>DB Test Screen</Button>
                         <Button onPress = {() => navigation.navigate('ShowCards')} mode="contained" icon='eye'>Show Cards</Button>
                         <Button onPress = {() => navigation.navigate('ShowCollections')} mode="contained" icon='newspaper'>Show Collections</Button>
                     </View>
