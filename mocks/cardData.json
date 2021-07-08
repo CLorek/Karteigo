@@ -1,0 +1,57 @@
+{
+  "card_0" :{
+    "question": "Frage 0",
+    "answer": "Antwort 0",
+    "stack": "Stack 0"
+  },
+  "card_1":{
+    "question": "Frage 1",
+    "answer": "Antwort 1",
+    "stack": "Stack 1"
+  },
+  "card_2" :{
+    "question": "Frage 2",
+    "answer": "Antwort 2",
+    "stack": "Stack 2"
+  },
+  "card_3":{
+    "question": "Frage 3",
+    "answer": "Antwort 3",
+    "stack": "Stack 3"
+  },
+  "card_4" :{
+    "question": "Frage 4",
+    "answer": "Antwort 4",
+    "stack": "Stack 4"
+  },
+  "card_5":{
+    "question": "Frage 5",
+    "answer": "Antwort 5",
+    "stack": "Stack 5"
+  },
+  "card_6" :{
+    "question": "Frage 6",
+    "answer": "Antwort 6",
+    "stack": "Stack 6"
+  },
+  "card_7":{
+    "question": "Frage 7",
+    "answer": "Antwort 7",
+    "stack": "Stack 7"
+  },
+  "card_8":{
+    "question": "Frage 8",
+    "answer": "Antwort 8",
+    "stack": "Stack 8"
+  },
+  "card_9" :{
+    "question": "Frage 9",
+    "answer": "Antwort 9",
+    "stack": "Stack 9"
+  },
+  "card_10":{
+    "question": "Frage 10",
+    "answer": "Antwort 10",
+    "stack": "Stack 10"
+  }
+}
