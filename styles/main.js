@@ -72,9 +72,31 @@ const styles = StyleSheet.create({
 
       },
 
-      tempButtonContainer:{
+      homeScreenButtonContainer:{
+        margin: 20,
         display: 'flex',
         flexWrap: 'nowrap',
+
+        paddingVertical: 10,
+        paddingHorizontal: 12
+      },
+
+      homeScreenButton:{
+        height: 150,
+        justifyContent: 'center',
+        margin: 5,
+        alignItems: "center",
+        backgroundColor: "#80ba24",
+        padding: 10,
+        elevation: 8,
+        borderRadius: 10,
+      },
+
+      homeScreenButtonText:{
+        fontSize: 18,
+        color: "white",
+        fontWeight: "900",
+        textTransform: "uppercase"
       },
 
       fabcontainer: {
@@ -84,8 +106,8 @@ const styles = StyleSheet.create({
         bottom: 0,
       },
       fab: {
-        backgroundColor: "white",
-        color: "black"
+        backgroundColor: "#80ba24",
+        color: "white"
       },
       text: {
         fontSize: 24,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, ScrollView, ImageBackground} from 'react-native';
+import {Text, View, ScrollView, ImageBackground, TouchableOpacity, Pressable} from 'react-native';
 import styles from "../styles/main";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button, FAB} from 'react-native-paper';
@@ -15,13 +15,16 @@ const Home = ({navigation}) => {
                     <View style = {styles.titles}>
                           <Text style = {styles.title}>{"Karteigo"}</Text>
                     </View>
-
-                    <View  style = {styles.tempButtonContainer}>
-                        <Button onPress = {() => navigation.navigate('Settings')} mode="contained" icon='cog'>Setting Screen</Button>
-                        <Button onPress = {() => navigation.navigate('Create')} mode="contained" icon='plus'>Create Screen</Button>
-                        <Button onPress = {() => navigation.navigate('Query')}  mode="contained" icon='newspaper'>Query Screen</Button>
-                        <Button onPress = {() => navigation.navigate('ShowCards')} mode="contained" icon='eye'>Show Cards</Button>
-                        <Button onPress = {() => navigation.navigate('ShowCollections')} mode="contained" icon='newspaper'>Show Collections</Button>
+                    
+                    <View style = {styles.homeScreenButtonContainer}>
+                    <View style = {{flexDirection: "row", marginBottom: 20}}>
+                        <TouchableOpacity style={styles.homeScreenButton} onPress = {() => navigation.navigate('Create')}><Text style={styles.homeScreenButtonText}>Karte erstellen</Text></TouchableOpacity>
+                        <TouchableOpacity style={styles.homeScreenButton} onPress = {() => navigation.navigate('Query')}><Text style={styles.homeScreenButtonText}>Abfrage-Modus</Text></TouchableOpacity>
+                    </View>
+                    <View >
+                        <TouchableOpacity  style={styles.homeScreenButton} onPress={() => navigation.navigate('ShowCards')} icon='eye'><Text style={styles.homeScreenButtonText}>Alle Karten</Text></TouchableOpacity>
+                    </View>
+                        
                     </View>
 
                     <View style = {styles.titles}>
@@ -32,7 +35,6 @@ const Home = ({navigation}) => {
                         Press me
                     </Button>
 
-                    <Icon name='bars' size={30} color='#900' />
 
                    
 

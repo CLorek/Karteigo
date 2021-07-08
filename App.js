@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from  "react-native-splash-screen";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import KarteigoFAB from './components/FAB';
 
 
 import HomeScreen from './screens/Home';
@@ -30,7 +31,7 @@ const App = () => {
           <Drawer.Navigator
             initialRouteName={HomeScreen} 
             drawerType="front"
-            overlayColor='pink'
+            overlayColor='#80ba24'
             drawerStyle={{
               // style
             }}
@@ -40,13 +41,15 @@ const App = () => {
               gestureEnabled: true,
               headerTitleAlign: "center",
               headerStyle: {
-                backgroundColor: '#0080ff'
+                backgroundColor: '#80ba24'
               },
               headerTintColor: 'white',
               headerTitleStyle:{
                 fontSize: 25,
                 fontWeight: '300'
               }
+              
+              
             }}
           >
             <Drawer.Screen 
@@ -58,7 +61,7 @@ const App = () => {
                   <Icon
                   name="home"
                   size={focused ? 25 : 20}
-                  color={focused? '#0080ff' : '#999999'}
+                  color={focused? '#0080ff' : '#4a5c66'}
                   />
                 )
               }}    
@@ -71,7 +74,7 @@ const App = () => {
                   <Icon
                   name="cog"
                   size={focused ? 25 : 20}
-                  color={focused? '#0080ff' : '#999999'}
+                  color={focused? '#0080ff' : '#4a5c66'}
                   />
                 )
               }}
@@ -84,7 +87,7 @@ const App = () => {
                   <Icon
                   name="plus"
                   size={focused ? 25 : 20}
-                  color={focused? '#0080ff' : '#999999'}
+                  color={focused? '#0080ff' : '#4a5c66'}
                   />
                 )
               }}
@@ -97,7 +100,7 @@ const App = () => {
                 <Icon
                 name="paragraph"
                 size={focused ? 25 : 20}
-                color={focused? '#0080ff' : '#999999'}
+                color={focused? '#0080ff' : '#4a5c66'}
                 />
               )
             }}
@@ -110,7 +113,7 @@ const App = () => {
                 <Icon
                 name="eye"
                 size={focused ? 25 : 20}
-                color={focused? '#0080ff' : '#999999'}
+                color={focused? '#0080ff' : '#4a5c66'}
                 />
               )
             }}
@@ -123,7 +126,7 @@ const App = () => {
                 <Icon
                 name="eye"
                 size={focused ? 25 : 20}
-                color={focused? '#0080ff' : '#999999'}
+                color={focused? '#0080ff' : '#4a5c66'}
                 />
               )
             }}
@@ -136,7 +139,7 @@ const App = () => {
                 <Icon
                 name="plus"
                 size={focused ? 25 : 20}
-                color={focused? '#0080ff' : '#999999'}
+                color={focused? '#0080ff' : '#4a5c66'}
                 />
               )
             }}
@@ -149,7 +152,7 @@ const App = () => {
                 <Icon
                 name="plus"
                 size={focused ? 25 : 20}
-                color={focused? '#0080ff' : '#999999'}
+                color={focused? '#0080ff' : '#4a5c66'}
                 />
               )
             }}
