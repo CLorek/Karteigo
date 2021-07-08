@@ -13,10 +13,13 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Card } from 'react-native-paper';
+import SelectDropdown from 'react-native-select-dropdown'
+import { parse } from '@babel/core';
 
+
+
+const topics = ["Programmieren", "Mathe", "Physik", "Kryptografie"]
 const addCard = () => {
-
-
 
 const[card, setValues] = useState({
     title: '',
@@ -50,7 +53,7 @@ const callData = async() => {
     try {
         const jsonValue =  await AsyncStorage.getItem(card.title);
         const parsed = JSON.parse(jsonValue);
-        alert(parsed.question);
+        alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
     } catch(e) {
         alert("Karte "+card.title+ " nicht vorhanden!");
     }
@@ -91,8 +94,19 @@ const deleteCard = async() => {
 
 return(
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-
-        <Text> AsyncStorage Test in React Native </Text>
+        <Text style={{fontSize: 30, marginBottom: 50}}> Fülle aus: </Text>
+        <SelectDropdown defaultButtonText="Themengebiet" style={{width: 200} }
+            data={topics}
+            onSelect={updateField("stack")}
+            
+            buttonTextAfterSelection={(selectedItem, index) => {
+                return selectedItem
+            }}
+            rowTextForSelection={(item, index) => {
+                return item
+            }}
+        />
+        
         <TextInput
             placeholder='Kartentitel eingeben..'
             name = "title"
@@ -111,12 +125,7 @@ return(
             value={card.answer}
             onChangeText={updateField("answer")}>
         </TextInput>
-        <TextInput
-            placeholder='Stapel'
-            name = "stack"
-            value={card.stack}
-            onChangeText={updateField("stack")}>
-        </TextInput>
+
         <View style={[{ width: "90%", margin: 10 }]}>
         <Button onPress={saveData} title='Karte abspeichern'/>
         <Button onPress={callData} title='Karte abrufen'/>
