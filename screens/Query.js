@@ -23,8 +23,8 @@ const Query = () => {
 
               <FlatList
                     data={keys}
-                    keyExtractor={item => item.id}
                     renderItem={({item}) => (<Text>{item}</Text>)}
+                    keyExtractor={(item, index) => index.toString()}
                 />
 
               <View style={styles.buttonContainer}>

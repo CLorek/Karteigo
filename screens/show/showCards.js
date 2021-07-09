@@ -18,9 +18,11 @@ const ShowCards = () => {
                         <Text style={{fontWeight: 'bold'}} onPress = {() => navigation.navigate('Create')}> </Text>
                         <Text style={{fontWeight: 'bold', alignSelf: 'center'}}>{item.question}</Text>
                         <Text style={{color: 'green'}}>{item.answer}</Text>
-                        <Text style={{color: 'blue', borderBottomStyle: 'solid', borderBottomWidth: 1, borderColor: 'darkGrey'}}>{item.stack}</Text>
+                        <Text style={{color: 'blue', borderBottomWidth: 1}}>{item.stack}</Text>
+                        {/* <Text style={{color: 'blue', borderBottomStyle: 'solid', borderBottomWidth: 1, borderColor: 'darkGrey'}}>{item.stack}</Text> */}
                     </>
                     )}
+                    keyExtractor={(item, index) => index.toString()}
                 />
 
             </View>
