@@ -3,7 +3,7 @@ import {View, Text, ImageBackground,Alert, StyleSheet} from 'react-native';
 import image from '../assets/paper.png';
 import styles from "../styles/main";
 import NavButton from '../components/NavButton'
-import {Button} from 'react-native-paper';
+import KarteiButton from '../components/KarteiButton';
 
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -33,9 +33,8 @@ const Settings = () => {
             <View style={styles.headerContainer}></View>
                 <View style={styles.contentContainer} style={{justifyContent: 'center', alignItems: 'center'}}>
                    <View style={styles.buttonContainer}>
-                    <Button style={styles.homeScreenButton}  onPress={clearAsyncStorage} mode="contained" icon='cog'>Alle Karten löschen</Button>
-            
-                </View>
+                    <KarteiButton onPress={clearAsyncStorage} text={"Alle Karten löschen"} />
+                  </View>
                 </View>
             <View style={styles.footerContainer}></View>
         </ImageBackground>
