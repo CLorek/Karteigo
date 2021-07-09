@@ -46,6 +46,14 @@ const styles = StyleSheet.create({
         paddingTop: 75
       },
 
+      logo:{
+        alignSelf: 'center',
+        height: 150,
+        width: 150,
+        marginTop: 10,
+        paddingBottom: 10
+      },
+
       buttonContainer:{
         flexDirection: 'row',
       },

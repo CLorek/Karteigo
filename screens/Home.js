@@ -1,9 +1,10 @@
 import React from 'react';
-import {Text, View, ScrollView, ImageBackground, TouchableOpacity, Pressable} from 'react-native';
+import {Text, View, Image, ScrollView, ImageBackground, TouchableOpacity, Pressable} from 'react-native';
 import styles from "../styles/main";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button, FAB} from 'react-native-paper';
-import image from '../assets/paper.png'
+import image from '../assets/paper.png';
+import logo from '../assets/logo.png';
 import KarteigoFAB from '../components/FAB';
 import KarteiButton from '../components/KarteiButton';
 
@@ -13,7 +14,7 @@ const Home = ({navigation}) => {
                 <ImageBackground source={image} style={styles.backgroundContainer}>
 
                     <View style={styles.headerContainer}>
-                        <Text style = {styles.title}>{"Karteigo"}</Text>
+                        <Image style={styles.logo} source={logo} />
                     </View>
                     <View style={styles.contentContainer}>
                         <View style={styles.buttonContainer}>
