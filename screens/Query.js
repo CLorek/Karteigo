@@ -4,6 +4,7 @@ import styles from "../styles/main";
 import image from '../assets/paper.png';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import KarteiButton from '../components/KarteiButton';
+import {Button, FAB} from 'react-native-paper';
 
 
 const Query = () => {
@@ -16,6 +17,36 @@ const Query = () => {
   
   })
 
+
+  async function callData({item})  {
+    try {
+        const jsonValue =  await AsyncStorage.getItem(item);
+        const parsed = JSON.parse(jsonValue);
+        alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
+    } catch(e) {
+        Alert.alert(
+            "Fehler",
+            "Karte "+item+ " nicht vorhanden!")
+    }
+
+}
+
+// Testfunktion
+async function call({item}) {
+    console.log("neu")
+    console.log("dies ist das item "+item)
+    let v = {item};
+    let s = JSON.stringify(v);
+    let a = s.toString();
+    console.log(v)
+    console.log(s)
+    console.log(a)
+    console.log(item)
+    console.log("---------------------")
+}
+
+
+
   return(
       <ImageBackground source={image} style={styles.backgroundContainer}>
           <View style={styles.headerContainer}></View>
@@ -23,12 +54,12 @@ const Query = () => {
 
               <FlatList
                     data={keys}
-                    renderItem={({item}) => (<Text>{item}</Text>)}
+                    renderItem={({item}) => ( <KarteiButton onPress={() =>callData({item})} text={item}/>   )}
+                    
                     keyExtractor={(item, index) => index.toString()}
                 />
 
               <View style={styles.buttonContainer}>
-              {/* <KarteiButton onPress={getAllKeys} text={"Alle Karten anzeigen"} /> */}
               </View>
 
   

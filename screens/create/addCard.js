@@ -63,7 +63,7 @@ const updateField = (name) => (value) =>{
 
 const callData = async() => {
     try {
-        const jsonValue =  await AsyncStorage.getItem(card.title);
+        const jsonValue =  await AsyncStorage.getItem("richard");
         const parsed = JSON.parse(jsonValue);
         alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
     } catch(e) {
