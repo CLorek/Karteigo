@@ -4,7 +4,7 @@ import { StyleSheet, YellowBox } from 'react-native';
 const styles = StyleSheet.create({
     mainContainer: {
         width: "100%",
-        height: "90%",
+        height: "100%",
         backgroundColor: variables.secondaryColor,
 //        borderWidth: 5,
       },

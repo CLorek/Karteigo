@@ -55,7 +55,6 @@ async function call({item}) {
               <FlatList
                     data={keys}
                     renderItem={({item}) => ( <KarteiButton onPress={() =>callData({item})} text={item}/>   )}
-                    
                     keyExtractor={(item, index) => index.toString()}
                 />
 
