@@ -5,9 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from  "react-native-splash-screen";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+import MainScreen from './screens/Main';
 import HomeScreen from './screens/Home';
 import SettingsScreen from './screens/Settings';
 import CreateScreen from './screens/Create';
+import ShowScreen from './screens/Show';
 import QueryScreen from './screens/Query';
 
 import AddCollectionScreen from './screens/create/addCollection';
@@ -16,7 +18,6 @@ import AddCardScreen from './screens/create/addCard';
 import ShowCardsScreen from './screens/show/showCards';
 import ShowCollectionsScreen from './screens/show/showCollections';
 import ShowSingleCardScreen from './screens/show/showSingleCard';
-
 
 const Stack = createStackNavigator();
 
@@ -29,13 +30,24 @@ const App = () => {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
-                  name="Home"
-                  component={HomeScreen}
+                  name="Main"
+                  component={MainScreen}
                   options={{
+                    title: "Karteigo",
                     headerTintColor: 'white',
                     headerStyle: {
                         backgroundColor: variables.primaryColor,
                     },
+                  }}
+            />
+            <Stack.Screen
+                  name="Show"
+                  component={ShowScreen}
+                  options={{
+                    headerTintColor: 'white',
+                    headerStyle: {
+                        backgroundColor: variables.primaryColor
+                    }
                   }}
             />
             <Stack.Screen
@@ -48,6 +60,17 @@ const App = () => {
                     }
                   }}
             />
+            <Stack.Screen
+                  name="ShowCollections"
+                  component={ShowCollectionsScreen}
+                  options={{
+                    headerTintColor: 'white',
+                    headerStyle: {
+                        backgroundColor: variables.primaryColor
+                    }
+                  }}
+            />
+
             <Stack.Screen
                   name="Create"
                   component={CreateScreen}

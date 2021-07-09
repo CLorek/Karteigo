@@ -12,7 +12,6 @@ const Home = ({navigation}) => {
     return(
         <View style={styles.mainContainer}>
                 <ImageBackground source={image} style={styles.backgroundContainer}>
-
                     <View style={styles.headerContainer}>
                         <Image style={styles.logo} source={logo} />
                     </View>
