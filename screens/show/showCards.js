@@ -1,28 +1,39 @@
 import React from 'react';
-import {View, Text, FlatList, ImageBackground} from 'react-native';
+import {View, Text, Button, FlatList, ImageBackground, TouchableOpacity} from 'react-native';
 import data from '../../mocks/cardData.json';
 import image from '../../assets/paper.png';
 import styles from "../../styles/main";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const ShowCards = () => {
+const ShowCards = ({navigation}) => {
     return(
         <ImageBackground source={image} style={styles.backgroundContainer}>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text>All Cards Screen</Text>
-
                 <FlatList
-                    style={{width: "100%", backgroundColor: "yellow"}}
+                    style={{width: "100%"}}
                     data={data}
                     renderItem={({item}) => (
                     <>
-                        <Text style={{fontWeight: 'bold'}} onPress = {() => navigation.navigate('Create')}> </Text>
-                        <Text style={{fontWeight: 'bold', alignSelf: 'center'}}>{item.question}</Text>
-                        <Text style={{color: 'green'}}>{item.answer}</Text>
-                        <Text style={{color: 'blue', borderBottomWidth: 1}}>{item.stack}</Text>
-                        {/* <Text style={{color: 'blue', borderBottomStyle: 'solid', borderBottomWidth: 1, borderColor: 'darkGrey'}}>{item.stack}</Text> */}
+                    <View style={styles.cardListElement}>
+                        <TouchableOpacity
+                                    style={styles.cardListButton}
+                                    onPress={() => {navigation.navigate('ShowSingleCard', {
+                                        title: item.title,
+                                        question: item.question,
+                                        answer: item.answer,
+                                        stack: item.stack});
+                        }}>
+                            <View style={{flex: 4}}>
+                                <Text style={styles.titleListElement}>{item.title}</Text>
+                                <Text style={styles.subTitleListElement}>{item.question}</Text>
+                            </View>
+                            <View style={{flex: 1}}>
+                                <Icon style={styles.listIcon} name='chevron-right'></Icon>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
                     </>
                     )}
-                    keyExtractor={(item, index) => index.toString()}
                 />
 
             </View>

@@ -159,6 +159,29 @@ const styles = StyleSheet.create({
     dropdown1RowStyle: { backgroundColor: '#EFEFEF', borderBottomColor: '#C5C5C5' },
     dropdown1RowTxtStyle: { color: '#444', textAlign: 'left' },
 
+
+    cardListButton: {
+        borderBottomWidth: 1,
+        borderColor: 'black',
+        padding: 12,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+
+    titleListElement:{
+        fontWeight: 'bold',
+        fontSize: 20
+    },
+
+    subTitleListElement:{
+        fontSize: 15
+    },
+
+    listIcon:{
+        fontSize: 20,
+        alignSelf: 'flex-end'
+    }
+
 });
 
 

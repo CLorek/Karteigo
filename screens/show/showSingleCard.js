@@ -5,8 +5,12 @@ import image from '../../assets/paper.png';
 import cardImage from '../../assets/card.png';
 import FlipCard from 'react-native-flip-card';
 
-const ShowSingleCard = () => {
+const ShowSingleCard = ({route}) => {
+
+    const {title, question, answer, stack} = route.params;
+
     return(
+
         <ImageBackground source={image} style={styles.backgroundContainer}>
             <View style={styles.headerContainer}>
 
@@ -25,12 +29,12 @@ const ShowSingleCard = () => {
                 >
                     <View style={styles.cardContainer}>
                         <Image style={styles.cardImage} source={cardImage}></Image>
-                        <Text style={styles.cardText}> Front </Text>
+                        <Text style={styles.cardText}> {JSON.stringify(question)} </Text>
                     </View>
 
                     <View style={styles.cardContainer}>
                         <Image style={styles.cardImage} source={cardImage}></Image>
-                        <Text style={styles.cardText}> Back </Text>
+                        <Text style={styles.cardText}> {JSON.stringify(answer)} </Text>
                     </View>
                 </FlipCard>
             </View>
