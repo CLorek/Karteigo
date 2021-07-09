@@ -61,18 +61,6 @@ const updateField = (name) => (value) =>{
 
 
 
-const callData = async() => {
-    try {
-        const jsonValue =  await AsyncStorage.getItem("richard");
-        const parsed = JSON.parse(jsonValue);
-        alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
-    } catch(e) {
-        Alert.alert(
-            "Fehler",
-            "Karte "+card.title+ " nicht vorhanden!")
-    }
-
-}
 
 
 const deleteCard = async() => {
@@ -139,7 +127,6 @@ return(
 
             <View style={[{ width: "90%", margin: 10 }]}>
                 <Button onPress={saveData} title='Karte abspeichern'/>
-                <Button onPress={callData} title='Karte abrufen'/>
                 <Button onPress={deleteCard}title='Karte xyz löschen'/>
             </View>
         </View>
