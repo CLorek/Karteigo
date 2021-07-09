@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderStyle: 'solid',
         borderWidth: 2
-
       },
 
       homeScreenButtonText:{

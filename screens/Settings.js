@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Button, Text, ImageBackground,Alert} from 'react-native';
 import image from '../assets/paper.png';
 import styles from "../styles/main";
+import KarteiButton from '../components/KarteiButton'
 
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -30,8 +31,10 @@ const Settings = () => {
         <ImageBackground source={image} style={styles.backgroundContainer}>
             <View style={styles.headerContainer}></View>
                 <View style={styles.contentContainer} style={{justifyContent: 'center', alignItems: 'center'}}>
-                   <Text> Settings </Text>
-                   <Button onPress={clearAsyncStorage}title='Alle Karten löschen'/>
+                   <View style={styles.buttonContainer}>
+                    <KarteiButton text={"Alle Karten löschen"} onPress={clearAsyncStorage}/>
+
+                </View>
                 </View>
             <View style={styles.footerContainer}></View>
         </ImageBackground>
