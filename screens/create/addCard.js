@@ -81,8 +81,9 @@ return(
     <ImageBackground source={image} style={styles.backgroundContainer}>
         <View style={styles.headerContainer}></View>
         <View style={styles.contentContainer}>
-            <Text style={{fontSize: 30, marginBottom: 50}}> Fülle aus: </Text>
-            <SelectDropdown defaultButtonText="Themengebiet" style={{width: 200} }
+            <Text style={{fontSize: 30, marginBottom: 40}}> Fülle aus: </Text>
+            <View style={styles.dropdownsRow} >
+            <SelectDropdown defaultButtonText="Themengebiet"
                 data={topics}
                 onSelect={updateField("stack")}
 
@@ -92,24 +93,33 @@ return(
                 rowTextForSelection={(item, index) => {
                     return item
                 }}
+                buttonStyle={styles.dropdown1BtnStyle}
+                buttonTextStyle={styles.dropdown1BtnTxtStyle}
+                dropdownStyle={styles.dropdown1DropdownStyle}
+                rowStyle={styles.dropdown1RowStyle}
+                rowTextStyle={styles.dropdown1RowTxtStyle}
             />
+            </View>
 
-            <TextInput
+
+            <TextInput style={styles.inputSmall}
                 placeholder='Kartentitel eingeben..'
                 name = "title"
                 value={card.title}
                 onChangeText={updateField("title")}>
             </TextInput>
-            <TextInput
+            <TextInput style={styles.inputMedium}
                 placeholder='Fragestellung eingeben..'
                 name = "question"
                 value={card.question}
+                multiline={true}
                 onChangeText={updateField("question")}>
             </TextInput>
-            <TextInput
+            <TextInput style={styles.inputLarge}
                 placeholder='Antwortmöglichkeit eingeben..'
                 name = "answer"
                 value={card.answer}
+                multiline={true}
                 onChangeText={updateField("answer")}>
             </TextInput>
 

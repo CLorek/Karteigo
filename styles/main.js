@@ -133,6 +133,31 @@ const styles = StyleSheet.create({
     cardText:{
         position: 'absolute',
     },
+    inputSmall: {
+      height: 40,
+      margin: 12,
+      borderWidth: 1,
+      backgroundColor: "white"
+    },
+    inputMedium: {
+      height: 60,
+      margin: 12,
+      borderWidth: 1,
+      backgroundColor: "white"
+    },
+    inputLarge: {
+      height: 120,
+      margin: 12,
+      borderWidth: 1,
+      backgroundColor: "white"
+    },
+    dropdownsRow: { flexDirection:'row', margin: 12 },
+
+    dropdown1BtnStyle: { flex: 1, height: 40, backgroundColor: "#FFF", borderWidth: 1, borderColor: "black" },
+    dropdown1BtnTxtStyle: { color: '#444', textAlign: 'left' },
+    dropdown1DropdownStyle: { backgroundColor: '#EFEFEF' },
+    dropdown1RowStyle: { backgroundColor: '#EFEFEF', borderBottomColor: '#C5C5C5' },
+    dropdown1RowTxtStyle: { color: '#444', textAlign: 'left' },
 
 });
 
