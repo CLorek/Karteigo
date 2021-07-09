@@ -29,11 +29,13 @@ const ShowSingleCard = ({route}) => {
                 >
                     <View style={styles.cardContainer}>
                         <Image style={styles.cardImage} source={cardImage}></Image>
+                        <Text style={styles.cardTitle}> Frage </Text>
                         <Text style={styles.cardText}> {JSON.stringify(question)} </Text>
                     </View>
 
                     <View style={styles.cardContainer}>
                         <Image style={styles.cardImage} source={cardImage}></Image>
+                        <Text style={styles.cardTitle}> Antwort </Text>
                         <Text style={styles.cardText}> {JSON.stringify(answer)} </Text>
                     </View>
                 </FlipCard>

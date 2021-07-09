@@ -132,7 +132,19 @@ const styles = StyleSheet.create({
 
     cardText:{
         position: 'absolute',
+        alignSelf: 'center',
+        paddingTop: 75,
+        fontSize: 20,
     },
+
+    cardTitle:{
+        position: 'absolute',
+        alignSelf: 'center',
+        paddingTop: 15,
+        fontWeight: 'bold',
+        fontSize: 15,
+    },
+
     inputSmall: {
       height: 40,
       margin: 12,
