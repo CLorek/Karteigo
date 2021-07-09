@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: 'black',
         borderStyle: 'solid',
-        borderWidth: 5
+        borderWidth: 2
 
       },
 
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         borderColor: 'black',
         borderStyle: 'solid',
-        borderWidth: 5
+        borderWidth: 2
       },
 
       text: {

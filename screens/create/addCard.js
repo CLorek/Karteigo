@@ -62,23 +62,6 @@ const callData = async() => {
 
 }
 
-const clearAsyncStorage = async() => {
-    Alert.alert(
-        "Sind Sie sicher?",
-        "Alle Karteikarten werden gelöscht",
-        [
-          {
-            text: "Ja",
-            onPress: () => {
-              AsyncStorage.clear();
-            },
-          },
-          {
-            text: "Nein",
-          },
-        ]
-      );
-}
 
 const deleteCard = async() => {
     try {
@@ -133,7 +116,6 @@ return(
             <View style={[{ width: "90%", margin: 10 }]}>
                 <Button onPress={saveData} title='Karte abspeichern'/>
                 <Button onPress={callData} title='Karte abrufen'/>
-                <Button onPress={clearAsyncStorage}title='Alle Karten löschen'/>
                 <Button onPress={deleteCard}title='Karte xyz löschen'/>
             </View>
         </View>
