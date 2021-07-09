@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Button, ImageBackground, Text} from 'react-native';
 import styles from '../styles/main';
 import image from '../assets/paper.png';
-import KarteiButton from '../components/KarteiButton';
+import NavButton from '../components/NavButton';
 
 
 const Create = ({navigation}) => {
@@ -13,8 +13,8 @@ const Create = ({navigation}) => {
             </View>
             <View style={styles.contentContainer} style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={styles.buttonContainer}>
-                    <KarteiButton text={"Neue Sammlung"} nav={"AddCollection"}/>
-                    <KarteiButton text={"Neue Karte"} nav={"AddCard"}/>
+                    <NavButton text={"Neue Sammlung"} nav={"AddCollection"}/>
+                    <NavButton text={"Neue Karte"} nav={"AddCard"}/>
                 </View>
             </View>
             <View style={styles.footerContainer}></View>

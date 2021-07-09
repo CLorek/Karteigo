@@ -6,7 +6,7 @@ import {Button, FAB} from 'react-native-paper';
 import image from '../assets/paper.png';
 import logo from '../assets/logo.png';
 import KarteiFab from '../components/KarteiFab';
-import KarteiButton from '../components/KarteiButton';
+import NavButton from '../components/NavButton';
 
 const Home = ({navigation}) => {
     return(
@@ -18,11 +18,11 @@ const Home = ({navigation}) => {
                     </View>
                     <View style={styles.contentContainer}>
                         <View style={styles.buttonContainer}>
-                            <KarteiButton text={'Erstelle Karten'} nav={'Create'}/>
-                            <KarteiButton text={'Abfrage-Modus'} nav={'Query'}/>
+                            <NavButton text={'Erstelle Karten'} nav={'Create'}/>
+                            <NavButton text={'Abfrage-Modus'} nav={'Query'}/>
                             </View>
                         <View style={styles.buttonContainer}>
-                            <KarteiButton text={'Alle Karten'} nav={'ShowCards'}/>
+                            <NavButton text={'Alle Karten'} nav={'ShowCards'}/>
                         </View>
                     </View>
                     <View style={styles.footerContainer}></View>

@@ -3,7 +3,7 @@ import {Text, TouchableOpacity} from 'react-native';
 import styles from "../../styles/main";
 import { useNavigation } from '@react-navigation/native';
 
-const karteiButton = (props) => {
+const NavButton = (props) => {
     const navigation = useNavigation();
     let text = props.text;
     let nav = props.nav;
@@ -18,4 +18,4 @@ const karteiButton = (props) => {
 
 }
 
-export default karteiButton;
+export default NavButton;
