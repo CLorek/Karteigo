@@ -8,7 +8,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const ShowCards = ({navigation}) => {
     return(
         <ImageBackground source={image} style={styles.backgroundContainer}>
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <View style={styles.headerContainer, {flex: 1}}>
+            </View>
+            <View style={{justifyContent: 'center', alignItems: 'center', paddingBottom: 50 }}>
                 <FlatList
                     style={{width: "100%"}}
                     data={data}
@@ -35,6 +37,9 @@ const ShowCards = ({navigation}) => {
                     </>
                     )}
                 />
+
+            </View>
+            <View style={styles.footerContainer}>
 
             </View>
         </ImageBackground>
