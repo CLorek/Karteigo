@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const KarteigoFAB = () => {
+const KarteiFab = () => {
     const navigation = useNavigation(); 
     return(
     <View style={styles.fabcontainer}>
@@ -17,4 +17,4 @@ const KarteigoFAB = () => {
     )
 }
 
-export default KarteigoFAB;
+export default KarteiFab;

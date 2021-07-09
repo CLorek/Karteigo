@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button, FAB} from 'react-native-paper';
 import image from '../assets/paper.png';
 import logo from '../assets/logo.png';
-import KarteigoFAB from '../components/FAB';
+import KarteiFab from '../components/KarteiFab';
 import KarteiButton from '../components/KarteiButton';
 
 const Home = ({navigation}) => {
@@ -25,11 +25,10 @@ const Home = ({navigation}) => {
                             <KarteiButton text={'Alle Karten'} nav={'ShowCards'}/>
                         </View>
                     </View>
-                    <View style={styles.footerContainer}>
-                    </View>
+                    <View style={styles.footerContainer}></View>
 
                 </ImageBackground>
-            <KarteigoFAB/>
+            <KarteiFab/>
         </View>
     )
 }

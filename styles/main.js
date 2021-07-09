@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 5
       },
+
       text: {
         fontSize: 24,
         padding: 10,

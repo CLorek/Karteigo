@@ -5,8 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from  "react-native-splash-screen";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import KarteigoFAB from './components/FAB';
-
 
 import HomeScreen from './screens/Home';
 import SettingsScreen from './screens/Settings';
