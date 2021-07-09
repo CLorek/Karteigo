@@ -32,10 +32,19 @@ const[card, setValues] = useState({
 
 
 const saveData = () => {
-    try{
+    try{ 
+        if (!card.title.trim()) {
+            Alert.alert(
+                "Halt!",
+                "Bitte einen Titel für die Karte eingeben")
+            return;
+          }
+          alert('Success');
         const jsonCard = JSON.stringify(card);
         AsyncStorage.setItem(card.title, jsonCard);
-        alert('Karteikarte gespeichert!');
+        Alert.alert(
+            "Abspeichern erfolgreich!",
+            "Die Karte wurde gespeichert!")
     }catch(e){
         alert('Fehler beim abspeichern der Karte');
     }
@@ -43,6 +52,7 @@ const saveData = () => {
 
 
 const updateField = (name) => (value) =>{
+    
     setValues({
        ...card,
        [name]: value
@@ -57,7 +67,9 @@ const callData = async() => {
         const parsed = JSON.parse(jsonValue);
         alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
     } catch(e) {
-        alert("Karte "+card.title+ " nicht vorhanden!");
+        Alert.alert(
+            "Fehler",
+            "Karte "+card.title+ " nicht vorhanden!")
     }
 
 }
@@ -66,7 +78,9 @@ const callData = async() => {
 const deleteCard = async() => {
     try {
         await AsyncStorage.removeItem(card.title);
-        alert(card.title+" wurde gelöscht");
+        Alert.alert(
+            "Erfolg!",
+            card.title+" wurde gelöscht")
         return true;
     }
     catch(exception) {

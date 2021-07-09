@@ -56,7 +56,7 @@ const App = () => {
               name="Home" 
               component={ HomeScreen } 
               options={{
-                title: "Home",
+                title: "Home_DEV",
                 drawerIcon: ({focused}) => (
                   <Icon
                   name="home"
