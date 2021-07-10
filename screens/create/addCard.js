@@ -39,7 +39,6 @@ const saveData = () => {
                 "Bitte einen Titel für die Karte eingeben")
             return;
           }
-          alert('Success');
         const jsonCard = JSON.stringify(card);
         AsyncStorage.setItem(card.title, jsonCard);
         Alert.alert(

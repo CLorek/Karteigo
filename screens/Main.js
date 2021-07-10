@@ -14,7 +14,7 @@ const Drawer = createDrawerNavigator();
 
 const Home = ({navigation}) => {
     return(
-        <Drawer.Navigator>
+        <Drawer.Navigator >
              <Drawer.Screen name="HomeDraw" component={HomeScreenNav} options={{
                                                                                title: "Home",
                                                                                drawerIcon: ({focused}) => (
@@ -27,7 +27,7 @@ const Home = ({navigation}) => {
                                                                              }}  />
 
              <Drawer.Screen name="CreateDraw" component={CreateScreenNav} options={{
-                                                                                             title: "Create",
+                                                                                             title: "Erstellen",
                                                                                              drawerIcon: ({focused}) => (
                                                                                                <Icon
                                                                                                name="plus"
@@ -38,7 +38,7 @@ const Home = ({navigation}) => {
                                                                                            }}  />
 
              <Drawer.Screen name="ShowDraw" component={ShowScreenNav} options={{
-                                                                                                                       title: "Show",
+                                                                                                                       title: "Alle Karten",
                                                                                                                        drawerIcon: ({focused}) => (
                                                                                                                          <Icon
                                                                                                                          name="eye"
@@ -49,7 +49,7 @@ const Home = ({navigation}) => {
                                                                                                                      }}  />
 
              <Drawer.Screen name="QueryDraw" component={QueryScreenNav} options={{
-                                                                                                          title: "Query",
+                                                                                                          title: "Abfrage",
                                                                                                           drawerIcon: ({focused}) => (
                                                                                                             <Icon
                                                                                                             name="book"
@@ -60,7 +60,7 @@ const Home = ({navigation}) => {
                                                                                                         }}  />
 
              <Drawer.Screen name="SettingsDraw" component={SettingsScreenNav} options={{
-                                                                               title: "Settings",
+                                                                               title: "Einstellungen",
                                                                                drawerIcon: ({focused}) => (
                                                                                  <Icon
                                                                                  name="cog"

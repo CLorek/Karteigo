@@ -22,7 +22,23 @@ const Query = () => {
     try {
         const jsonValue =  await AsyncStorage.getItem(item);
         const parsed = JSON.parse(jsonValue);
-        alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
+        // alert("Thema: "+ parsed.stack+", Titel: "+parsed.title+", Frage: "+parsed.question+", Antwort: "+parsed.answer+" ");
+        Alert.alert(
+            parsed.stack+": "+parsed.title,
+            parsed.question,
+            [
+                {
+                  text: "Antwort",
+                  onPress: () => {
+                    Alert.alert(
+                        "richtige Antwort:",
+                        parsed.answer);
+                  },
+                },
+              ]
+            )
+
+
     } catch(e) {
         Alert.alert(
             "Fehler",
@@ -52,13 +68,14 @@ async function call({item}) {
           <View style={styles.headerContainer}></View>
           <View style={styles.contentContainer} style={{justifyContent: 'center', alignItems: 'center'}}>
 
+
+
+              <View style={styles.buttonContainer}>
               <FlatList
                     data={keys}
                     renderItem={({item}) => ( <KarteiButton onPress={() =>callData({item})} text={item}/>   )}
                     keyExtractor={(item, index) => index.toString()}
                 />
-
-              <View style={styles.buttonContainer}>
               </View>
 
   

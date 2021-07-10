@@ -36,7 +36,7 @@ const ShowCards = ({navigation}) => {
                     </View>
                     </>
                     )}
-                    keyExtractor={(item) => item.toString()}
+                   keyExtractor={(item, index) => index.toString()}
                 />
 
             </View>
