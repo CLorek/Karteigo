@@ -9,7 +9,7 @@ const Show = ({navigation}) => {
     return(
         <ImageBackground source={image} style={styles.backgroundContainer}>
             <View style={styles.headerContainer}>
-                <Text style={styles.subTitle}>Was willst du erstellen?</Text>
+                <Text style={styles.subTitle}>Was willst du dir anschauen?</Text>
             </View>
             <View style={styles.contentContainer} style={{justifyContent: 'center', alignItems: 'center'}}>
                 <View style={styles.buttonContainer}>

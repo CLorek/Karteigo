@@ -16,7 +16,7 @@ const ShowCards = ({navigation}) => {
                     data={data}
                     renderItem={({item}) => (
                     <>
-                    <View style={styles.cardListElement}>
+                    <View style={styles.cardListElement} key={item.toString}>
                         <TouchableOpacity
                                     style={styles.cardListButton}
                                     onPress={() => {navigation.navigate('ShowSingleCard', {
@@ -36,6 +36,7 @@ const ShowCards = ({navigation}) => {
                     </View>
                     </>
                     )}
+                    keyExtractor={(item) => item.toString()}
                 />
 
             </View>
